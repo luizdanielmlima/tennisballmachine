@@ -1,0 +1,65 @@
+Building a Tennis Ball Machine
+A short story about going from a simple sketch to a fully functional tennis ball machine!
+
+=========
+
+See it working!
+After one year of work, I took the tennis ball machine to the court to test it, and enjoyed some backhand practice with it. Lots of fun!
+
+WATCH
+
+=========
+
+Research and Ideas
+After seeing this video on Youtube I was excited to build a tennis ball machine. But I knew it wouldn´t be easy. I researched some ways to launch the ball and I decided to use the 2-wheel principle. 
+
+=======
+
+It was during this time that I decided on the motors, components and materials I would use.
+
+From design to manufacturing
+How hard can it be ... right?
+GALLERY
+
+====
+
+6 months
+CAD DESIGN
+
+Definitely this was the most "brain intensive" step, where I had to detail every part of the machine, according to the available resources.
+
+I´ve also bought some commercial parts, such as the main motors, electrical stuff and some machined parts, such as the wheels.
+
+----
+
+4 months
+BUILDING & ASSEMBLY
+
+Definitely this was the most "brain intensive" step, where I had to detail every part of the machine, according to the available resources.
+
+I´ve also bought some commercial parts, such as the main motors, electrical stuff and some machined parts, such as the wheels.
+
+---
+
+2 months
+ELECTRONICS & PAINTING
+After I finished building and testing if the ball was being launched correctly (I had to put some overgrip on the wheels!), I learned some Arduino to program the ball feeder.
+
+At this time I also dissasembled the entire machine (ugh!) to paint every part and then assemble them again.
+
+====
+
+Final Thoughts
+
+Well, it was quite an adventure to build this machine! As every hobbist know, it always seem easier than it is ;-) 
+
+Of course I thought about quitting many times - but I kept on trying, fixing, re-building , until I got it working.
+
+In the end it was a great project to learn new things: woodwork, arduino, painting and much more.  
+
+Was it worth it? Definitely!
+
+====
+
+Design And Programming by Luiz Daniel Lima, 2019
+
