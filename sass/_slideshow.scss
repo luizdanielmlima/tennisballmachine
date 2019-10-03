@@ -1,0 +1,15 @@
+.slides-list {
+  border: 1px solid red;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: start;
+}
+
+.slide {
+  height: 50vh;
+}
