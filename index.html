@@ -35,8 +35,8 @@
         <div class="banner__text">
           <h1>Building a Tennis Ball Machine</h1>
           <p>
-            A short story about going from a simple sketch to a fully functional
-            tennis ball machine!
+            How I went from a simple sketch to a fully functional tennis ball
+            machine!
           </p>
         </div>
       </div>
@@ -50,21 +50,41 @@
             After one year of work, I took the tennis ball machine to the court
             to test it, and enjoyed some backhand practice with it. Lots of fun!
           </p>
-          <button class="btn">Watch</button>
+          <!-- <button href="#popup" class="btn">Watch</button> -->
         </div>
-        <img src="img/TMB_Final.JPG" alt="" class="video__img" />
+        <div class="video__player">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/TWDsz1A2Yt8"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <!-- <figure class="video__fig">
+          <a href="#popup"
+            ><img src="img/play_icon.png" alt="play icon" class="video__icon"
+          /></a>
+          <img src="img/TMB_Final.JPG" alt="machine foto" class="video__img" />
+        </figure> -->
       </section>
 
       <section class="ideas" id="ideas">
         <img src="img/sketch.png" alt="" class="ideas__img" />
         <div class="ideas__text">
           <h2 class="mb-sm">Research and Ideas</h2>
+
           <p>
-            After seeing this video on Youtube I was excited to build a tennis
-            ball machine. But I knew it wouldn´t be easy. I researched some ways
-            to launch the ball and I decided to use the 2-wheel principle. It
-            was during this time that I decided on the motors, components and
-            materials I would use.
+            After seeing
+            <a href="https://youtu.be/oZjx7F1doGs" target="_blank"
+              >this video on Youtube</a
+            >
+            I was excited to build a tennis ball machine. But I knew it wouldn´t
+            be easy. I researched other ways to launch the ball and settled on
+            the 2-wheel solution. It was during this time that I decided on the
+            motors, components and materials I would use.
           </p>
         </div>
       </section>
@@ -90,9 +110,11 @@
               <p class="card__description">
                 Definitely this was the most "brain intensive" step, where I had
                 to detail every part of the machine, according to the available
-                resources. I´ve also bought some commercial parts, such as the
-                main motors, electrical stuff and some machined parts, such as
-                the wheels.
+                resources.
+                <span><br /></span>
+                <br />I´ve also bought some commercial parts, such as the main
+                motors, electrical stuff and some machined parts, such as the
+                wheels.
               </p>
             </div>
           </div>
@@ -104,11 +126,12 @@
               <p class="card__time">4 months</p>
               <h3 class="card__title">Building & Assembly</h3>
               <p class="card__description">
-                Definitely this was the most "brain intensive" step, where I had
-                to detail every part of the machine, according to the available
-                resources. I´ve also bought some commercial parts, such as the
-                main motors, electrical stuff and some machined parts, such as
-                the wheels.
+                Hands-on time! A lot of learning, sweat ... and errors.
+                Definitely very tiresome but also very rewarding, since you
+                start to see your creation coming alive.<span><br /></span>
+                <br />I decided to use mostly wood for the machine´s structure.
+                I wanted to learn some woodwork and avoid expending too much
+                money.
               </p>
             </div>
           </div>
@@ -122,9 +145,10 @@
               <p class="card__description">
                 After I finished building and testing if the ball was being
                 launched correctly (I had to put some overgrip on the wheels!),
-                I learned some Arduino to program the ball feeder. At this time
-                I also dissasembled the entire machine (ugh!) to paint every
-                part and then assemble it back.
+                I learned some Arduino to program the ball feeder.
+                <span><br /></span>
+                <br />At this time I also dissasembled the entire machine (ugh!)
+                to paint every part and then assemble it back.
               </p>
             </div>
           </div>
@@ -164,5 +188,22 @@
         &copy; Copyright 2019 by Luiz Daniel Lima.
       </p>
     </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <a href="#section-tours" class="popup__close">&times;</a>
+        <iframe
+          class="popup__iframe"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/TWDsz1A2Yt8"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

@@ -1,9 +1,13 @@
 // COLOR VARIABLES
 $color-primary: #0b624b;
+$color-primary-dark: #073d2e;
 $color-secondary: #fdce52;
+$color-secondary-dark: #eab017;
 $color-tertiary: #d5622a;
+$color-tertiary-dark: #7e320e;
 $color-grey-light-1: #c1c1c1;
 $color-grey-dark-1: #363636;
+$color-black: #111;
 
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
@@ -44,4 +48,15 @@ body {
   font-weight: 300;
   line-height: 1.6;
   font-size: 2rem;
+}
+
+a {
+  &:link,
+  &:visited {
+    color: $color-secondary-dark;
+  }
+
+  &:hover {
+    color: $color-secondary;
+  }
 }

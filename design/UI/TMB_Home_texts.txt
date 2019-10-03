@@ -1,3 +1,10 @@
+PHOTO CREDITS:
+Photo by Guillherme Schneider on Unsplash (drone court)
+Photo by Siamak Mokhtari on Unsplash (ball focus)
+Photo by Samuel-Elias on Unsplash (ball kicking)
+
+===========================================
+
 Building a Tennis Ball Machine
 A short story about going from a simple sketch to a fully functional tennis ball machine!
 
@@ -35,9 +42,9 @@ I´ve also bought some commercial parts, such as the main motors, electrical stu
 4 months
 BUILDING & ASSEMBLY
 
-Definitely this was the most "brain intensive" step, where I had to detail every part of the machine, according to the available resources.
+Hands-on time! A lot of learning, sweat ... and errors. Definitely very tiresome but also very rewarding, since you start to see your creation coming alive.
 
-I´ve also bought some commercial parts, such as the main motors, electrical stuff and some machined parts, such as the wheels.
+I decided to use mostly wood for the machine´s structure. I wanted to learn some woodwork and avoid expending too much money.
 
 ---
 

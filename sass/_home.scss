@@ -3,6 +3,7 @@ header {
 
   .nav {
     position: fixed;
+    z-index: 1000;
     top: 0;
     padding: 1rem $padding-main-horiz;
     display: flex;
@@ -38,21 +39,12 @@ header {
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
-        background-image: linear-gradient(
-          120deg,
-          transparent 0%,
-          transparent 50%,
-          #fff 50%
-        );
-        background-size: 220%;
         transition: all 0.4s;
       }
 
       &:hover,
       &:active {
-        background-position: 100%;
-        color: $color-primary;
-        transform: translateX(1rem);
+        color: $color-secondary;
       }
     }
   }
@@ -63,12 +55,12 @@ header {
     justify-content: center;
     padding: $padding-main-vert $padding-main-horiz;
     color: white;
-    height: 50vh;
+    height: 70vh;
     background-image: linear-gradient(
-        rgba($color-primary, 0.7),
-        rgba($color-secondary, 0.7)
+        rgba($color-secondary, 0.4),
+        rgba($color-primary, 0.4)
       ),
-      url(../img/banner.JPG);
+      url(../img/court_tennisball.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -78,16 +70,37 @@ header {
 .video {
   padding: $padding-main-vert $padding-main-horiz;
   background-color: $color-primary;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-dark,
+    $color-primary
+  );
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 20rem;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 10rem;
   align-items: center;
 
-  &__img {
-    width: 80%;
-    box-shadow: $shadow;
-    border-radius: $border;
-  }
+  // &__fig {
+  //   position: relative;
+  // }
+
+  // &__icon {
+  //   cursor: pointer;
+  //   @include absCenter;
+  //   transition: all 0.5s;
+
+  //   &:hover {
+  //     transform: translate(-50%, -52%);
+  //   }
+  // }
+
+  // &__img {
+  //   display: block;
+  //   width: 60%;
+  //   margin: 0 auto;
+  //   box-shadow: $shadow;
+  //   border-radius: $border;
+  // }
 
   p {
     margin-bottom: 4rem;
@@ -97,7 +110,7 @@ header {
 // SECTION: IDEAS
 .ideas {
   padding: $padding-main-vert $padding-main-horiz;
-  background-color: white;
+  background-image: linear-gradient(to right bottom, #fff, #eee);
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 20rem;
@@ -240,5 +253,72 @@ footer {
   .copyright {
     display: inline-block;
     font-size: 1.6rem;
+  }
+}
+
+// POP-UP
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.3);
+  }
+
+  &__content {
+    @include absCenter;
+
+    // width: 75%;
+    background-color: transparent;
+    // box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    // border-radius: 3px;
+    display: table;
+    padding: 6rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.4s 0.2s;
+  }
+
+  // Open states
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-secondary;
+      position: absolute;
+      top: 3rem;
+      right: 3rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+      line-height: 1rem;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 }
