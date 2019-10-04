@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://npmcdn.com/flickity@2/dist/flickity.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -25,6 +29,9 @@
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#building">Building</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#gallery">Gallery</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#final">Final Thoughts</a>
@@ -155,6 +162,58 @@
         </div>
       </section>
 
+      <div class="gallery" id="gallery">
+        <div class="gallery__text">
+          <h2 class="mb-md">Gallery</h2>
+        </div>
+        <div class="gallery__content">
+          <div class="carousel" data-flickity='{ "lazyLoad": true }'>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="img/gallery/01-ball_launcher_module.JPG"
+                alt="ball launcher module"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="img/gallery/02-building_feeder_carrousel.JPG"
+                alt="feeder carousel"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="img/gallery/03-ready_first_test.JPG"
+                alt="first test"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="img/gallery/04-painting_parts.JPG"
+                alt="painting parts"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="img/gallery/05-testing_carrousel.JPG"
+                alt="testing carousel"
+              />
+            </div>
+            <div class="carousel-cell">
+              <img
+                class="carousel-cell-image"
+                data-flickity-lazyload="./img/gallery/06-testing_court.JPG"
+                alt="testing court"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section class="final" id="final">
         <div class="ideas__text">
           <h2 class="mb-sm">Final Thoughts</h2>
@@ -189,21 +248,7 @@
       </p>
     </footer>
 
-    <div class="popup" id="popup">
-      <div class="popup__content">          
-          <div class="slide-show" >
-            <div class="slides-list" >
-                <img class="slide" src="img/gallery/01-ball_launcher_module.JPG" />
-                <img class="slide" src="img/gallery/02-building_feeder_carrousel.JPG" />
-                <img class="slide" src="img/gallery/03-ready_first_test.JPG" />
-                <img class="slide" src="img/gallery/04-painting_parts.JPG" />
-                <img class="slide" src="img/gallery/05-testing_carrousel.JPG" />
-                <img class="slide" src="img/gallery/06-testing_court.JPG" />
-            </div>
-          </div
-      </div>
-    </div>
-
+    <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

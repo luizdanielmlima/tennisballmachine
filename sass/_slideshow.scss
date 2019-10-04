@@ -1,15 +1,27 @@
-.slides-list {
-  border: 1px solid red;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-content: start;
+.carousel {
+  background: $color-primary-dark;
 }
 
-.slide {
-  height: 50vh;
+.carousel-cell {
+  width: 66%;
+  height: 60rem;
+  margin-right: 10px;
+  background: $color-primary-dark;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  box-shadow: $shadow;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
 }
