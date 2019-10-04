@@ -6,13 +6,26 @@ header {
     z-index: 1000;
     top: 0;
     padding: 1rem $padding-main-horiz;
-    display: flex;
-    align-items: center;
     font-size: 1.6rem;
     font-family: $font-display;
     background-color: $color-grey-dark-1;
     width: 100%;
     height: 8rem;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-largest) {
+      flex-direction: column;
+      height: auto;
+
+      &__img {
+        margin: 2rem 0;
+      }
+
+      &__item {
+        margin: 0 0.2rem;
+      }
+    }
 
     &__img {
       width: 4rem;
@@ -21,12 +34,14 @@ header {
     &__list {
       flex: 1;
       justify-content: flex-end;
-      display: flex;
       list-style: none;
       width: 100%;
+      display: flex;
+      justify-content: space-around;
     }
 
     &__item {
+      border: 1px solid red;
       margin: 0 1rem;
     }
 
@@ -46,6 +61,17 @@ header {
       &:active {
         color: $color-secondary;
       }
+    }
+
+    &__toggle {
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+      color: white;
+      // display: none;
     }
   }
 
@@ -84,10 +110,21 @@ header {
     $color-primary-dark,
     $color-primary
   );
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 10rem;
+  display: flex;
   align-items: center;
+
+  @media only screen and (max-width: $bp-largest) {
+    flex-direction: column;
+
+    &__player {
+      margin-bottom: 3rem;
+    }
+
+    &__text {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+  }
 
   &__player {
     box-shadow: $shadow;
@@ -95,30 +132,8 @@ header {
     height: 315px;
   }
 
-  // &__fig {
-  //   position: relative;
-  // }
-
-  // &__icon {
-  //   cursor: pointer;
-  //   @include absCenter;
-  //   transition: all 0.5s;
-
-  //   &:hover {
-  //     transform: translate(-50%, -52%);
-  //   }
-  // }
-
-  // &__img {
-  //   display: block;
-  //   width: 60%;
-  //   margin: 0 auto;
-  //   box-shadow: $shadow;
-  //   border-radius: $border;
-  // }
-
-  p {
-    margin-bottom: 4rem;
+  &__text {
+    margin-right: 4rem;
   }
 }
 
@@ -126,19 +141,31 @@ header {
 .ideas {
   padding: $padding-main-vert $padding-main-horiz;
   background-image: linear-gradient(to right bottom, #fff, #eee);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 20rem;
+  display: flex;
+  flex-direction: row-reverse;
   align-items: center;
 
+  @media only screen and (max-width: $bp-large) {
+    flex-direction: column;
+
+    &__text {
+      text-align: center;
+    }
+  }
+
+  &__img-container {
+    flex: 0 0 30%;
+  }
+
   &__img {
-    width: 80%;
+    width: 100%;
     box-shadow: $shadow;
     border-radius: $border;
   }
 
   &__text {
     color: $color-primary;
+    margin-left: 5rem;
   }
 
   p {
@@ -160,6 +187,14 @@ header {
   background-size: cover;
   background-position: center;
 
+  @media only screen and (max-width: $bp-largest) {
+    background-image: linear-gradient(
+      to bottom,
+      rgba($color-tertiary, 0.95),
+      rgba($color-tertiary-dark, 0.95)
+    );
+  }
+
   &__header {
     display: grid;
     grid-template-columns: 4fr min-content;
@@ -175,27 +210,51 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 8rem;
 
+    @media only screen and (max-width: $bp-largest) {
+      grid-template-columns: 1fr;
+    }
+
     .card {
       border-radius: $border;
-
       overflow: hidden;
       color: $color-primary;
       background-color: white;
       box-shadow: $shadow;
 
+      @media only screen and (max-width: $bp-largest) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        align-items: center;
+
+        &__fig {
+          display: block;
+          height: 100%;
+          min-height: 100%;
+        }
+
+        &__img {
+          border: none;
+        }
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
       &__fig {
         width: 100%;
         height: 30rem;
-        margin-bottom: 1rem;
       }
 
       &__img {
-        object-fit: cover;
-        border-top-right-radius: $border;
-        border-top-left-radius: $border;
-        border-bottom: 1px solid #ddd;
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        display: block;
+        border-bottom: 1px solid #ddd;
       }
 
       &__text {
@@ -230,9 +289,29 @@ header {
   padding: $padding-main-vert $padding-main-horiz;
   background-color: white;
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 20rem;
   align-items: center;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto max-content;
+    grid-gap: 2rem;
+    justify-items: center;
+
+    &__images {
+      height: 100%;
+    }
+
+    &__img {
+      top: 0;
+      left: 0;
+    }
+
+    &__img--1 {
+      transform: rotateZ(90deg);
+    }
+  }
 
   &__images {
     position: relative;
@@ -240,29 +319,22 @@ header {
   }
 
   &__img {
-    position: absolute;
     height: 25rem;
     box-shadow: $shadow;
     border-radius: $border;
   }
 
   &__img--1 {
-    top: 0;
-    right: 7rem;
-    transform: rotateZ(2deg);
+    transform: translate(-2rem, 2rem);
   }
 
   &__img--2 {
-    top: 0;
-    left: 0;
-    transform: rotateZ(-2deg);
+    transform: resize(1.2);
   }
 
   &__img--3 {
-    top: 50%;
-    left: 50%;
-    transform: translate(-60%, -50%) scale(1.1);
     z-index: 10;
+    transform: translate(2rem, 2rem);
   }
 
   p {
