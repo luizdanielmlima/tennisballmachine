@@ -248,43 +248,50 @@ header {
     grid-template-rows: auto max-content;
     grid-gap: 2rem;
     justify-items: center;
-
-    &__images {
-      height: 100%;
-    }
-
-    &__img {
-      top: 0;
-      left: 0;
-    }
-
-    &__img--1 {
-      transform: rotateZ(90deg);
-    }
   }
 
   &__images {
     position: relative;
     height: 100%;
+    min-height: 30rem;
   }
 
   &__img {
+    position: absolute;
     height: 25rem;
     box-shadow: $shadow;
     border-radius: $border;
   }
 
   &__img--1 {
-    transform: translate(-2rem, 2rem);
+    left: 50%;
+    top: 50%;
+    transform: translate(80%, -40%);
+
+    @media only screen and (max-width: $bp-small) {
+      transform: translate(20%, -50%) scale(0.9);
+    }
   }
 
   &__img--2 {
-    transform: resize(1.2);
+    left: 50%;
+    top: 50%;
+    transform: translate(-170%, -40%);
+
+    @media only screen and (max-width: $bp-small) {
+      transform: translate(-110%, -50%) scale(0.9);
+    }
   }
 
   &__img--3 {
     z-index: 10;
-    transform: translate(2rem, 2rem);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @media only screen and (max-width: $bp-small) {
+      transform: translate(-50%, -70%) scale(0.9);
+    }
   }
 
   p {
@@ -301,7 +308,7 @@ footer {
 
   @media only screen and (max-width: $bp-medium) {
     padding: $padding-main-mobile;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   .copyright {
