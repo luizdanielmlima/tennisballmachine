@@ -1,0 +1,134 @@
+$navbar-height: 8rem;
+
+.nav {
+  width: 100%;
+  height: $navbar-height;
+  position: fixed;
+  top: 0;
+  padding: 1rem $padding-main-horiz / 2;
+  font-size: 1.6rem;
+  font-family: $font-display;
+  background-color: $color-grey-dark-1;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+
+  @media only screen and (max-width: $bp-largest) {
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+  }
+
+  &__logo {
+    width: 4rem;
+    z-index: 1000;
+  }
+
+  // Menu, container for the UL an LI
+  .nav-active {
+    display: inline-block;
+    transform: translateX(0);
+  }
+
+  &__menu {
+    background-color: $color-grey-dark-1;
+    flex: 1;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: $navbar-height;
+      transform: translateY(-120%);
+      transition: all 0.3s;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    @media only screen and (max-width: $bp-medium) {
+      padding: 3rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 2rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.4s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+  }
+
+  &__toggle {
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: none;
+    z-index: 1000;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: inline-block;
+      justify-self: end;
+    }
+
+    &-icon {
+      position: relative;
+      margin-top: 2rem;
+
+      &,
+      &::before,
+      &::after {
+        width: 3rem;
+        height: 2px;
+        background-color: $color-secondary;
+        display: inline-block;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+      }
+
+      &::before {
+        top: -0.8rem;
+      }
+
+      &::after {
+        top: 0.8rem;
+      }
+    }
+  }
+
+  &__toggle:hover .menu-btn__icon::before {
+    top: -1rem;
+  }
+
+  &__toggle:hover .menu-btn__icon::after {
+    top: 1rem;
+  }
+}

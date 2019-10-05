@@ -1,85 +1,20 @@
+.section {
+  padding: $padding-main-vert $padding-main-horiz;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: $padding-main-mobile;
+  }
+}
+
 header {
   color: $color-grey-light-1;
 
-  .nav {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    padding: 1rem $padding-main-horiz;
-    font-size: 1.6rem;
-    font-family: $font-display;
-    background-color: $color-grey-dark-1;
-    width: 100%;
-    height: 8rem;
-    display: flex;
-    align-items: center;
-
-    @media only screen and (max-width: $bp-largest) {
-      flex-direction: column;
-      height: auto;
-
-      &__img {
-        margin: 2rem 0;
-      }
-
-      &__item {
-        margin: 0 0.2rem;
-      }
-    }
-
-    &__img {
-      width: 4rem;
-    }
-
-    &__list {
-      flex: 1;
-      justify-content: flex-end;
-      list-style: none;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    &__item {
-      border: 1px solid red;
-      margin: 0 1rem;
-    }
-
-    &__link {
-      &:link,
-      &:visited {
-        font-size: 2rem;
-        font-weight: 300;
-        padding: 1rem 2rem;
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition: all 0.4s;
-      }
-
-      &:hover,
-      &:active {
-        color: $color-secondary;
-      }
-    }
-
-    &__toggle {
-      position: absolute;
-      cursor: pointer;
-      right: 5%;
-      top: 50%;
-      transform: translate(-5%, -50%);
-      z-index: 2;
-      color: white;
-      // display: none;
-    }
-  }
+  // here goes the css in _navbar.scss
 
   .banner {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: $padding-main-vert $padding-main-horiz;
     color: white;
     height: 70vh;
     background-image: linear-gradient(
@@ -89,6 +24,16 @@ header {
       url(../img/court_tennisball.jpg);
     background-size: cover;
     background-position: center;
+
+    &__text {
+      @media only screen and (max-width: $bp-medium) {
+        text-align: center;
+
+        h1 {
+          margin-bottom: 2rem;
+        }
+      }
+    }
 
     p {
       font-size: 2.2rem;
@@ -103,7 +48,6 @@ header {
 
 // SECTION: VIDEO
 .video {
-  padding: $padding-main-vert $padding-main-horiz;
   background-color: $color-primary;
   background-image: linear-gradient(
     to right bottom,
@@ -116,10 +60,6 @@ header {
   @media only screen and (max-width: $bp-largest) {
     flex-direction: column;
 
-    &__player {
-      margin-bottom: 3rem;
-    }
-
     &__text {
       text-align: center;
       margin-bottom: 5rem;
@@ -127,19 +67,27 @@ header {
   }
 
   &__player {
-    box-shadow: $shadow;
-    width: 560px;
+    flex: 0 0 560px;
     height: 315px;
+    box-shadow: $shadow;
+
+    @media only screen and (max-width: $bp-largest) {
+      flex: 0 0 360px;
+      max-height: 202px;
+    }
   }
 
   &__text {
     margin-right: 4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-right: 0;
+    }
   }
 }
 
 // SECTION: IDEAS
 .ideas {
-  padding: $padding-main-vert $padding-main-horiz;
   background-image: linear-gradient(to right bottom, #fff, #eee);
   display: flex;
   flex-direction: row-reverse;
@@ -147,10 +95,6 @@ header {
 
   @media only screen and (max-width: $bp-large) {
     flex-direction: column;
-
-    &__text {
-      text-align: center;
-    }
   }
 
   &__img-container {
@@ -166,6 +110,11 @@ header {
   &__text {
     color: $color-primary;
     margin-left: 5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-left: 0;
+      text-align: justify;
+    }
   }
 
   p {
@@ -175,7 +124,6 @@ header {
 
 // SECTION: BUILDING IT
 .building {
-  padding: $padding-main-vert $padding-main-horiz;
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(
@@ -199,6 +147,10 @@ header {
     display: grid;
     grid-template-columns: 4fr min-content;
     margin-bottom: 4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+    }
 
     button {
       align-self: center;
@@ -276,7 +228,6 @@ header {
 .gallery {
   height: auto;
   background-color: $color-primary-dark;
-  padding: $padding-main-vert $padding-main-horiz;
 
   &__text {
     display: block;
@@ -286,7 +237,6 @@ header {
 
 // SECTION: FINAL THOUGHTS
 .final {
-  padding: $padding-main-vert $padding-main-horiz;
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -348,6 +298,11 @@ footer {
   background-color: $color-grey-dark-1;
   display: flex;
   justify-content: flex-end;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: $padding-main-mobile;
+    justify-content: center;
+  }
 
   .copyright {
     display: inline-block;
