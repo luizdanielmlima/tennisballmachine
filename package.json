@@ -1,14 +1,25 @@
 {
   "name": "tennisballmachine",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple website I did about how I built my tennis ball machine.",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Luiz Daniel Lima",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.12.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizdanielmlima/tennisballmachine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luizdanielmlima/tennisballmachine/issues"
+  },
+  "homepage": "https://github.com/luizdanielmlima/tennisballmachine"
 }
