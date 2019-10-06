@@ -95,16 +95,32 @@ header {
 
   @media only screen and (max-width: $bp-large) {
     flex-direction: column;
+    justify-content: center;
   }
 
   &__img-container {
+    box-shadow: $shadow;
+    border-radius: $border;
+    overflow: hidden;
     flex: 0 0 30%;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 60%;
+      height: 30vh;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      height: 30vh;
+      margin-bottom: 4rem;
+    }
   }
 
   &__img {
+    display: block;
     width: 100%;
-    box-shadow: $shadow;
-    border-radius: $border;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__text {
